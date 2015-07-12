@@ -120,6 +120,8 @@ html{
     left: 10px;
     text-align: left;
     font-size: 15px;
+
+//    outline: 1px solid red;
   }
 
   .country_name_special {
@@ -138,7 +140,7 @@ html{
     position: absolute;
     bottom: $w;
     right: $h;
-    background: url("../svg/previous_slide.svg");
+    background: url("../images/svg/previous_slide.svg");
   }
 }
 
@@ -151,57 +153,57 @@ html{
 
 
 #pic_1 {
-//  width: 620px;
-//  height: 420px;
-  background: url(../countries/Latin_America.jpg);
+  width: 620px;
+  height: 420px;
+  background: url("../images/countries/Latin_America.jpg");
 }
 
 #pic_2 {
-  background: url(../countries/Russia.jpg);
+  background: url("../images/countries/Russia.jpg");
 }
 
 #pic_3 {
-  background: url(../countries/Cuba.jpg);
+  background: url(../images/countries/Cuba.jpg);
 }
 
 #pic_4 {
-  background: url(../countries/Norway.jpg);
+  background: url(../images/countries/Norway.jpg);
 }
 
 #pic_5 {
-  background: url(../countries/Switzerland.jpg);
+  background: url(../images/countries/Switzerland.jpg);
 }
 
 #pic_6 {
-  background: url(../countries/China.jpg);
+  background: url(../images/countries/China.jpg);
 }
 
 #pic_7 {
-  background: url(../countries/Germany.jpg);
+  background: url(../images/countries/Germany.jpg);
 }
 
 #pic_8 {
-  background: url(../countries/Japan.jpg);
+  background: url(../images/countries/Japan.jpg);
 }
 
 #pic_9 {
-  background: url(../countries/Australia.jpg);
+  background: url(../images/countries/Australia.jpg);
 }
 
 #pic_10 {
-  background: url(../countries/India.jpg);
+  background: url(../images/countries/India.jpg);
 }
 
 #pic_11 {
-  background: url(../countries/Finland.jpg);
+  background: url(../images/countries/Finland.jpg);
 }
 
 #pic_12 {
-  background: url(../countries/New_Zealand.jpg);
+  background: url(../images/countries/New_Zealand.jpg);
 
 }
 #pic_13 {
-  background: url(../countries/England.jpg);
+  background: url(../images/countries/England.jpg);
 }
 
 

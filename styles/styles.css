@@ -504,7 +504,7 @@ html body {
   text-align: left;
   font-size: 15px;
 }
-/* line 125, styles.scss */
+/* line 127, styles.scss */
 .block .country_name_special {
   height: 40px;
   top: 81px;
@@ -513,101 +513,103 @@ html body {
   font: normal 40px NewBaskervilleC;
   color: white;
 }
-/* line 135, styles.scss */
+/* line 137, styles.scss */
 .block .previous_bttn, .block .next_bttn {
   width: 21px;
   height: 21px;
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: url("../svg/previous_slide.svg");
+  background: url("../images/svg/previous_slide.svg");
 }
 
-/* line 147, styles.scss */
+/* line 149, styles.scss */
 .bxslider {
   color: red;
   font-weight: bold;
 }
 
-/* line 153, styles.scss */
+/* line 155, styles.scss */
 #pic_1 {
-  background: url(../countries/Latin_America.jpg);
+  width: 620px;
+  height: 420px;
+  background: url("../images/countries/Latin_America.jpg");
 }
 
-/* line 159, styles.scss */
+/* line 161, styles.scss */
 #pic_2 {
-  background: url(../countries/Russia.jpg);
+  background: url("../images/countries/Russia.jpg");
 }
 
-/* line 163, styles.scss */
+/* line 165, styles.scss */
 #pic_3 {
-  background: url(../countries/Cuba.jpg);
+  background: url(../images/countries/Cuba.jpg);
 }
 
-/* line 167, styles.scss */
+/* line 169, styles.scss */
 #pic_4 {
-  background: url(../countries/Norway.jpg);
+  background: url(../images/countries/Norway.jpg);
 }
 
-/* line 171, styles.scss */
+/* line 173, styles.scss */
 #pic_5 {
-  background: url(../countries/Switzerland.jpg);
+  background: url(../images/countries/Switzerland.jpg);
 }
 
-/* line 175, styles.scss */
+/* line 177, styles.scss */
 #pic_6 {
-  background: url(../countries/China.jpg);
+  background: url(../images/countries/China.jpg);
 }
 
-/* line 179, styles.scss */
+/* line 181, styles.scss */
 #pic_7 {
-  background: url(../countries/Germany.jpg);
+  background: url(../images/countries/Germany.jpg);
 }
 
-/* line 183, styles.scss */
+/* line 185, styles.scss */
 #pic_8 {
-  background: url(../countries/Japan.jpg);
+  background: url(../images/countries/Japan.jpg);
 }
 
-/* line 187, styles.scss */
+/* line 189, styles.scss */
 #pic_9 {
-  background: url(../countries/Australia.jpg);
+  background: url(../images/countries/Australia.jpg);
 }
 
-/* line 191, styles.scss */
+/* line 193, styles.scss */
 #pic_10 {
-  background: url(../countries/India.jpg);
+  background: url(../images/countries/India.jpg);
 }
 
-/* line 195, styles.scss */
+/* line 197, styles.scss */
 #pic_11 {
-  background: url(../countries/Finland.jpg);
+  background: url(../images/countries/Finland.jpg);
 }
 
-/* line 199, styles.scss */
+/* line 201, styles.scss */
 #pic_12 {
-  background: url(../countries/New_Zealand.jpg);
+  background: url(../images/countries/New_Zealand.jpg);
 }
 
-/* line 203, styles.scss */
+/* line 205, styles.scss */
 #pic_13 {
-  background: url(../countries/England.jpg);
+  background: url(../images/countries/England.jpg);
 }
 
 /*---------- FOOTER ----------*/
-/* line 210, styles.scss */
+/* line 212, styles.scss */
 #footer {
   height: 60px;
   background: #282a2d;
 }
-/* line 214, styles.scss */
+/* line 216, styles.scss */
 #footer #years {
   float: left;
   margin: 22px 10px;
   font: normal 16px NewBaskervilleC;
   color: #5e6267;
 }
-/* line 220, styles.scss */
+/* line 222, styles.scss */
 #footer #logo {
   width: 28px;
   height: 33px;
@@ -615,14 +617,14 @@ html body {
   margin: 13px 10px;
   background: url(../images/running_man.png);
 }
-/* line 228, styles.scss */
+/* line 230, styles.scss */
 #footer #author {
   float: right;
   padding: 22px 5px;
   font: normal 14px PT Sans;
   color: #8f9397;
 }
-/* line 235, styles.scss */
+/* line 237, styles.scss */
 #footer #slogan {
   float: right;
   right: 0;
