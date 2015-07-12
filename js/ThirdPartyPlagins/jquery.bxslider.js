@@ -213,12 +213,12 @@
             var slidesShowing = getNumberSlidesShowing();
             // make modifications to the viewport (.bx-viewport)
             slider.viewport.css({
-                width: '100%',
-                overflow: 'hidden',
-                position: 'relative'
+                width: '100%'
+                //MAN overflow: 'hidden',
+                //MAN position: 'relative'
             });
             slider.viewport.parent().css({
-                maxWidth: getViewportMaxWidth()
+                //man maxWidth: getViewportMaxWidth()
             });
             // make modification to the wrapper (.bx-wrapper)
             if (!slider.settings.pager) {

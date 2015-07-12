@@ -56,7 +56,7 @@
   transform: translatez(0);
 }
 
-/* line 56, _bxslider.scss */
+/* line 57, _bxslider.scss */
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
   position: absolute;
@@ -65,7 +65,7 @@
 }
 
 /* LOADER */
-/* line 65, _bxslider.scss */
+/* line 66, _bxslider.scss */
 .bx-wrapper .bx-loading {
   min-height: 50px;
   background: url(../images/loader.gif) center center no-repeat #fff;
@@ -78,7 +78,7 @@
 }
 
 /* PAGER */
-/* line 78, _bxslider.scss */
+/* line 79, _bxslider.scss */
 .bx-wrapper .bx-pager {
   text-align: center;
   font-size: .85em;
@@ -88,7 +88,7 @@
   padding-top: 20px;
 }
 
-/* line 87, _bxslider.scss */
+/* line 88, _bxslider.scss */
 .bx-wrapper .bx-pager .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
@@ -96,7 +96,7 @@
   *display: inline;
 }
 
-/* line 94, _bxslider.scss */
+/* line 95, _bxslider.scss */
 .bx-wrapper .bx-pager.bx-default-pager a {
   background: #666;
   text-indent: -9999px;
@@ -110,39 +110,40 @@
   border-radius: 5px;
 }
 
-/* line 107, _bxslider.scss */
+/* line 108, _bxslider.scss */
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #000;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
-/* line 114, _bxslider.scss */
+/* line 115, _bxslider.scss */
 .bx-wrapper .bx-prev {
-  left: -50px;
+  left: 250px;
+  top: 50px;
   background: url(../images/controls.png) no-repeat 0 -32px;
 }
 
-/* line 119, _bxslider.scss */
+/* line 121, _bxslider.scss */
 .bx-wrapper .bx-next {
   right: -50px;
   background: url(../images/controls.png) no-repeat -43px -32px;
 }
 
-/* line 124, _bxslider.scss */
+/* line 126, _bxslider.scss */
 .bx-wrapper .bx-prev:hover {
   background-position: 0 0;
 }
 
-/* line 128, _bxslider.scss */
+/* line 130, _bxslider.scss */
 .bx-wrapper .bx-next:hover {
   background-position: -43px 0;
 }
 
-/* line 132, _bxslider.scss */
+/* line 134, _bxslider.scss */
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
-  top: 50%;
+  top: 160px;
   margin-top: -16px;
   outline: 0;
   width: 32px;
@@ -151,18 +152,18 @@
   z-index: 9999;
 }
 
-/* line 143, _bxslider.scss */
+/* line 145, _bxslider.scss */
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
 
 /* AUTO CONTROLS (START / STOP) */
-/* line 149, _bxslider.scss */
+/* line 151, _bxslider.scss */
 .bx-wrapper .bx-controls-auto {
   text-align: center;
 }
 
-/* line 153, _bxslider.scss */
+/* line 155, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start {
   display: block;
   text-indent: -9999px;
@@ -173,13 +174,13 @@
   margin: 0 3px;
 }
 
-/* line 163, _bxslider.scss */
+/* line 165, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start:hover,
 .bx-wrapper .bx-controls-auto .bx-start.active {
   background-position: -86px 0;
 }
 
-/* line 168, _bxslider.scss */
+/* line 170, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop {
   display: block;
   text-indent: -9999px;
@@ -190,27 +191,27 @@
   margin: 0 3px;
 }
 
-/* line 178, _bxslider.scss */
+/* line 180, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop:hover,
 .bx-wrapper .bx-controls-auto .bx-stop.active {
   background-position: -86px -33px;
 }
 
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-/* line 186, _bxslider.scss */
+/* line 188, _bxslider.scss */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
   text-align: left;
   width: 80%;
 }
 
-/* line 191, _bxslider.scss */
+/* line 193, _bxslider.scss */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
   width: 35px;
 }
 
 /* IMAGE CAPTIONS */
-/* line 198, _bxslider.scss */
+/* line 200, _bxslider.scss */
 .bx-wrapper .bx-caption {
   position: absolute;
   bottom: 0;
@@ -220,7 +221,7 @@
   width: 100%;
 }
 
-/* line 207, _bxslider.scss */
+/* line 209, _bxslider.scss */
 .bx-wrapper .bx-caption span {
   color: #fff;
   font-family: Arial, sans-serif;
@@ -229,9 +230,26 @@
   padding: 10px;
 }
 
-/* line 215, _bxslider.scss */
+/* line 217, _bxslider.scss */
 .bx-clone {
   display: none;
+}
+
+/* line 222, _bxslider.scss */
+.bx-wrapper {
+  top: -16px;
+  left: -40px;
+  width: 300px !important;
+}
+
+/* line 228, _bxslider.scss */
+.bx-pager {
+  display: none;
+}
+
+/* line 231, _bxslider.scss */
+.bx-next {
+  left: 295px !important;
 }
 
 /**
@@ -474,37 +492,37 @@ html body {
   justify-content: space-between;
 }
 
-/* line 96, styles.scss */
+/* line 97, styles.scss */
 .block {
   width: 300px;
   height: 200px;
   margin: 20px 20px 0 0;
   position: relative;
   display: inline-block;
-  font: normal 36px NewBaskervilleC;
   color: white;
+  background: green;
 }
-/* line 105, styles.scss */
+/* line 107, styles.scss */
 .block:hover {
   cursor: pointer;
 }
-/* line 109, styles.scss */
+/* line 111, styles.scss */
 .block .country_name {
   position: absolute;
   top: 75px;
   width: 300px;
   text-align: center;
-  font-size: 30px;
+  font: normal 36px NewBaskervilleC;
 }
-/* line 117, styles.scss */
+/* line 119, styles.scss */
 .block:hover .country_name {
   top: initial;
   bottom: 20px;
   left: 10px;
   text-align: left;
-  font-size: 15px;
+  font: normal 24px NewBaskervilleC;
 }
-/* line 127, styles.scss */
+/* line 129, styles.scss */
 .block .country_name_special {
   height: 40px;
   top: 81px;
@@ -513,7 +531,7 @@ html body {
   font: normal 40px NewBaskervilleC;
   color: white;
 }
-/* line 137, styles.scss */
+/* line 139, styles.scss */
 .block .previous_bttn, .block .next_bttn {
   width: 21px;
   height: 21px;
@@ -523,93 +541,98 @@ html body {
   background: url("../images/svg/previous_slide.svg");
 }
 
-/* line 149, styles.scss */
+/* line 151, styles.scss */
 .bxslider {
   color: red;
   font-weight: bold;
 }
 
-/* line 155, styles.scss */
+/* line 157, styles.scss */
 #pic_1 {
-  width: 620px;
-  height: 420px;
   background: url("../images/countries/Latin_America.jpg");
 }
 
-/* line 161, styles.scss */
+/* line 163, styles.scss */
 #pic_2 {
   background: url("../images/countries/Russia.jpg");
 }
 
-/* line 165, styles.scss */
+/* line 167, styles.scss */
 #pic_3 {
   background: url(../images/countries/Cuba.jpg);
 }
 
-/* line 169, styles.scss */
+/* line 171, styles.scss */
 #pic_4 {
   background: url(../images/countries/Norway.jpg);
 }
 
-/* line 173, styles.scss */
+/* line 175, styles.scss */
 #pic_5 {
   background: url(../images/countries/Switzerland.jpg);
 }
 
-/* line 177, styles.scss */
+/* line 179, styles.scss */
 #pic_6 {
   background: url(../images/countries/China.jpg);
 }
 
-/* line 181, styles.scss */
+/* line 183, styles.scss */
 #pic_7 {
   background: url(../images/countries/Germany.jpg);
 }
 
-/* line 185, styles.scss */
+/* line 187, styles.scss */
 #pic_8 {
   background: url(../images/countries/Japan.jpg);
 }
 
-/* line 189, styles.scss */
+/* line 191, styles.scss */
 #pic_9 {
   background: url(../images/countries/Australia.jpg);
 }
 
-/* line 193, styles.scss */
+/* line 195, styles.scss */
 #pic_10 {
   background: url(../images/countries/India.jpg);
 }
 
-/* line 197, styles.scss */
+/* line 199, styles.scss */
 #pic_11 {
   background: url(../images/countries/Finland.jpg);
 }
 
-/* line 201, styles.scss */
+/* line 203, styles.scss */
 #pic_12 {
   background: url(../images/countries/New_Zealand.jpg);
 }
 
-/* line 205, styles.scss */
+/* line 207, styles.scss */
 #pic_13 {
   background: url(../images/countries/England.jpg);
 }
 
+/* line 213, styles.scss */
+#test {
+  height: 200px;
+  width: 300px;
+  outline: 1px solid red;
+}
+
 /*---------- FOOTER ----------*/
-/* line 212, styles.scss */
+/* line 221, styles.scss */
 #footer {
   height: 60px;
   background: #282a2d;
 }
-/* line 216, styles.scss */
+/* line 225, styles.scss */
 #footer #years {
   float: left;
   margin: 22px 10px;
   font: normal 16px NewBaskervilleC;
   color: #5e6267;
 }
-/* line 222, styles.scss */
+/* line 231, styles.scss */
 #footer #logo {
   width: 28px;
   height: 33px;
@@ -617,14 +640,14 @@ html body {
   margin: 13px 10px;
   background: url(../images/running_man.png);
 }
-/* line 230, styles.scss */
+/* line 239, styles.scss */
 #footer #author {
   float: right;
   padding: 22px 5px;
   font: normal 14px PT Sans;
   color: #8f9397;
 }
-/* line 237, styles.scss */
+/* line 246, styles.scss */
 #footer #slogan {
   float: right;
   right: 0;

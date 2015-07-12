@@ -12,7 +12,7 @@
     box-shadow: 0 0 5px #ccc;
     border: 5px solid #fff;*/
 
-    width: 300px !important;
+  width: 300px !important;
   @include mobile-landscape {
         width: 500px !important;
 
@@ -41,6 +41,7 @@
       box-shadow: 0 0 5px #ccc;
       border:  5px solid #fff;*/
   left: -5px;
+
 //  overflow: visible!important;
 
   /*background: #fff;*/
@@ -112,7 +113,8 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-  left: -50px;
+  left: 250px; //MAN left: -50px;
+  top: 50px;//MAN
   background: url(../images/controls.png) no-repeat 0 -32px;
 }
 
@@ -131,7 +133,7 @@
 
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
-  top: 50%;
+  top: 160px; //MAN top: 50%;
   margin-top: -16px;
   outline: 0;
   width: 32px;
@@ -215,3 +217,19 @@
 .bx-clone {
   display: none;
 }
+
+//MAN
+.bx-wrapper{
+  top: -16px;
+  left: -40px;
+  width: 300px !important;
+}
+
+.bx-pager {
+  display: none;
+}
+.bx-next {
+  left: 295px !important;
+}
+
+//<--MAN
