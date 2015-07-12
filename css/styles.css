@@ -1,291 +1,633 @@
-html{
-	height: 100%;
-
-	/*background: green;*/
-	/*font: normal	 32px NewBaskervilleC;*/
-	outline: none;
+/** RESET AND LAYOUT
+===================================*/
+/* line 4, _bxslider.scss */
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+  /*
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;*/
+  width: 300px !important;
+}
+@media only screen and (min-width: 480px) and (max-width: 640px) and (min-aspect-ratio: 4 / 3) {
+  /* line 4, _bxslider.scss */
+  .bx-wrapper {
+    width: 500px !important;
+  }
+}
+@media only screen and (min-width: 599px) and (max-aspect-ratio: 4 / 3), (min-width: 1024px) and (min-height: 600px) and (min-aspect-ratio: 4 / 3) {
+  /* line 4, _bxslider.scss */
+  .bx-wrapper {
+    width: 720px !important;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* line 4, _bxslider.scss */
+  .bx-wrapper {
+    width: 1015px !important;
+  }
 }
 
-body {
-	/*width: 100%;*/
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-
-	background: #eff2f7;
-	outline: none;
+/* line 30, _bxslider.scss */
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
 }
 
+/** THEME
+===================================*/
+/* line 38, _bxslider.scss */
+.bx-wrapper .bx-viewport {
+  /*	-moz-box-shadow: 0 0 5px #ccc;
+      -webkit-box-shadow: 0 0 5px #ccc;
+      box-shadow: 0 0 5px #ccc;
+      border:  5px solid #fff;*/
+  left: -5px;
+  /*background: #fff;*/
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
 
-.page {	
-	margin: auto 90px; 
+/* line 56, _bxslider.scss */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
 
-	/*outline: 1px solid green;*/
+/* LOADER */
+/* line 65, _bxslider.scss */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(../images/loader.gif) center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+/* line 78, _bxslider.scss */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+/* line 87, _bxslider.scss */
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 94, _bxslider.scss */
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 107, _bxslider.scss */
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* line 114, _bxslider.scss */
+.bx-wrapper .bx-prev {
+  left: -50px;
+  background: url(../images/controls.png) no-repeat 0 -32px;
+}
+
+/* line 119, _bxslider.scss */
+.bx-wrapper .bx-next {
+  right: -50px;
+  background: url(../images/controls.png) no-repeat -43px -32px;
+}
+
+/* line 124, _bxslider.scss */
+.bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+}
+
+/* line 128, _bxslider.scss */
+.bx-wrapper .bx-next:hover {
+  background-position: -43px 0;
+}
+
+/* line 132, _bxslider.scss */
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+/* line 143, _bxslider.scss */
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+/* line 149, _bxslider.scss */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+/* line 153, _bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(../images/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 163, _bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+/* line 168, _bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(../images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 178, _bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+/* line 186, _bxslider.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+/* line 191, _bxslider.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+/* line 198, _bxslider.scss */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666 \9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+/* line 207, _bxslider.scss */
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+/* line 215, _bxslider.scss */
+.bx-clone {
+  display: none;
+}
+
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+/* line 14, _jquery.lightbox.scss */
+#jquery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  height: 500px;
+}
+
+/* line 22, _jquery.lightbox.scss */
+#jquery-lightbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 31, _jquery.lightbox.scss */
+#jquery-lightbox a img {
+  border: none;
+}
+
+/* line 32, _jquery.lightbox.scss */
+#lightbox-container-image-box {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+/* line 39, _jquery.lightbox.scss */
+#lightbox-container-image {
+  padding: 10px;
+}
+
+/* line 40, _jquery.lightbox.scss */
+#lightbox-loading {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 49, _jquery.lightbox.scss */
+#lightbox-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 57, _jquery.lightbox.scss */
+#lightbox-container-image-box > #lightbox-nav {
+  left: 0;
+}
+
+/* line 58, _jquery.lightbox.scss */
+#lightbox-nav a {
+  outline: none;
+}
+
+/* line 59, _jquery.lightbox.scss */
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+  width: 49%;
+  height: 100%;
+  zoom: 1;
+  display: block;
+}
+
+/* line 65, _jquery.lightbox.scss */
+#lightbox-nav-btnPrev {
+  left: 0;
+  float: left;
+}
+
+/* line 69, _jquery.lightbox.scss */
+#lightbox-nav-btnNext {
+  right: 0;
+  float: right;
+}
+
+/* line 73, _jquery.lightbox.scss */
+#lightbox-container-image-data-box {
+  font: 10px Verdana, Helvetica, sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  line-height: 1.4em;
+  overflow: auto;
+  width: 100%;
+  padding: 0 10px 0;
+}
+
+/* line 82, _jquery.lightbox.scss */
+#lightbox-container-image-data {
+  padding: 0 10px;
+  color: #666;
+}
+
+/* line 86, _jquery.lightbox.scss */
+#lightbox-container-image-data #lightbox-image-details {
+  width: 70%;
+  float: left;
+  text-align: left;
+}
+
+/* line 91, _jquery.lightbox.scss */
+#lightbox-image-details-caption {
+  font-weight: bold;
+}
+
+/* line 92, _jquery.lightbox.scss */
+#lightbox-image-details-currentNumber {
+  display: block;
+  clear: left;
+  padding-bottom: 1.0em;
+}
+
+/* line 97, _jquery.lightbox.scss */
+#lightbox-secNav-btnClose {
+  width: 66px;
+  float: right;
+  padding-bottom: 0.7em;
+}
+
+/* line 8, styles.scss */
+html {
+  height: 100%;
+  font: normal 16px NewBaskervilleC;
+  outline: none;
+}
+/* line 13, styles.scss */
+html body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #eff2f7;
+  outline: none;
+}
+
+/* line 23, styles.scss */
+.page {
+  margin: auto 90px;
 }
 
 /*---------- HEADER ----------*/
-
+/* line 29, styles.scss */
 #header {
-	width: 100%;
-	height: 80px;
-	
-	background: #282a2d;
-	/*position: relative;*/
+  width: 100%;
+  height: 80px;
+  background: #282a2d;
 }
-
+/* line 34, styles.scss */
 #header #logo {
-	/*top: 12px;	*/
-	/*left: 90px;*/
-	width: 41px;
-	height: 56px;
-	/*position: relative;*/
-	/*padding: 0;*/
-	margin: 12px 15px;
-	float: left;
-	
-	background: url(../images/feet.png);
-	/*border: 1px dotted blue;*/
-	/*outline: 1px solid red;*/
+  width: 41px;
+  height: 56px;
+  margin: 12px 15px;
+  float: left;
+  background: url(../images/feet.png);
 }
-
+/* line 41, styles.scss */
 #header #title {
-	position: relative;
-	top: 15px;
-	
-	font: normal 32px NewBaskervilleC;
-	color: white;
-	/*outline: 1px solid red;*/
+  position: relative;
+  top: 15px;
+  font: normal 32px NewBaskervilleC;
+  color: white;
 }
-
+/* line 47, styles.scss */
 #header #slogan {
-	top: 10px;
-	position: relative;
-	
-	font: normal 11px PT Sans;
-	color: #4c4f54;
-	/*outline: 1px solid red;*/
+  top: 10px;
+  position: relative;
+  font: normal 11px PT Sans;
+  color: #4c4f54;
 }
 
 /*---------- CONTENT ----------*/
-
+/* line 58, styles.scss */
 #content {
-	/*height: 200px;*/
-	padding: 60px 0;
+  padding: 60px 0;
 }
 
-#content #menu {
-	/*padding: 60px 0 10px 0;*/
-	/*padding-left: 0;*/
-
-	/*outline: 1px solid red;*/
+/* line 62, styles.scss */
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 66, styles.scss */
+#menu ul li {
+  margin-right: 27px;
+  display: inline;
+}
+/* line 70, styles.scss */
+#menu ul li a {
+  outline: none;
+  text-decoration: none;
+  font: normal 12px PT Sans;
+  color: #9fa2a8;
+  /*#bfc2c8;*/
+}
+/* line 76, styles.scss */
+#menu ul li a:hover {
+  color: #242526;
+}
+/* line 80, styles.scss */
+#menu ul li a #nowopen {
+  font-weight: bold;
+  color: #242526;
+  border-bottom: 2px solid #242526;
 }
 
-#content #menu ul{
-	margin: 0;
-	padding: 0;
-	
-	/*outline: 1px solid blue;*/
+/* line 90, styles.scss */
+#pics_area {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-#content #menu ul li {
-	margin-right: 27px;
-	display: inline;
-
-
-	/*outline: 1px solid green;*/
+/* line 96, styles.scss */
+.block {
+  width: 300px;
+  height: 200px;
+  margin: 20px 20px 0 0;
+  position: relative;
+  display: inline-block;
+  font: normal 36px NewBaskervilleC;
+  color: white;
+}
+/* line 105, styles.scss */
+.block:hover {
+  cursor: pointer;
+}
+/* line 109, styles.scss */
+.block .country_name {
+  position: absolute;
+  top: 75px;
+  width: 300px;
+  text-align: center;
+  font-size: 30px;
+}
+/* line 117, styles.scss */
+.block:hover .country_name {
+  top: initial;
+  bottom: 20px;
+  left: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+/* line 125, styles.scss */
+.block .country_name_special {
+  height: 40px;
+  top: 81px;
+  left: 29px;
+  position: relative;
+  font: normal 40px NewBaskervilleC;
+  color: white;
+}
+/* line 135, styles.scss */
+.block .previous_bttn, .block .next_bttn {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: url("../svg/previous_slide.svg");
 }
 
-#content #menu ul li a{
-	outline: none;
-	text-decoration: none;
-	font: normal 12px PT Sans;
-	color: #9fa2a8; /*#bfc2c8;*/
+/* line 147, styles.scss */
+.bxslider {
+  color: red;
+  font-weight: bold;
 }
 
-#content #menu ul li a:hover {
-	/*background-color: red;*/
-	/*font-weight: bold;*/
-	color: #242526;
+/* line 153, styles.scss */
+#pic_1 {
+  background: url(../countries/Latin_America.jpg);
 }
 
-#content #menu ul li a#nowopen {
-	font-weight: bold;
-	color: #242526;
-	border-bottom: 2px solid #242526;
+/* line 159, styles.scss */
+#pic_2 {
+  background: url(../countries/Russia.jpg);
 }
 
-#content #pics_area {
-	/*margin: -20px;*/
-
-
-	display: flex;
-	flex-flow: row-reverse wrap;
-	justify-content: space-between;
-
-
-	/*flex-wrap: wrap-reverse;*/
-	/*outline: 1px solid red;*/
+/* line 163, styles.scss */
+#pic_3 {
+  background: url(../countries/Cuba.jpg);
 }
 
-#content #pics_area .block {
-	width: 300px;
-	height: 200px;
-	margin: 20px 20px 0 0;
-
-
-	font: normal 36px NewBaskervilleC;
-	color: white;
-
-	/*margin: auto;*/
-
-	/*display: inline-block;*/
-
-	/*float: right;*/
-
-	/*outline: 1px solid red;*/
+/* line 167, styles.scss */
+#pic_4 {
+  background: url(../countries/Norway.jpg);
 }
 
-#content #pics_area #pic_1 {
-	width: 620px;
-	height: 420px;
-
-	background: url(../countries/Latin_America.jpg);
+/* line 171, styles.scss */
+#pic_5 {
+  background: url(../countries/Switzerland.jpg);
 }
 
-#content #pics_area #pic_2 {
-	background: url(../countries/Russia.jpg);
+/* line 175, styles.scss */
+#pic_6 {
+  background: url(../countries/China.jpg);
 }
 
-#content #pics_area #pic_3 {
-	background: url(../countries/Cuba.jpg);
+/* line 179, styles.scss */
+#pic_7 {
+  background: url(../countries/Germany.jpg);
 }
 
-#content #pics_area #pic_4 {
-	background: url(../countries/Norway.jpg);
+/* line 183, styles.scss */
+#pic_8 {
+  background: url(../countries/Japan.jpg);
 }
 
-#content #pics_area #pic_5 {
-	background: url(../countries/Switzerland.jpg);
+/* line 187, styles.scss */
+#pic_9 {
+  background: url(../countries/Australia.jpg);
 }
 
-#content #pics_area #pic_6 {
-	background: url(../countries/China.jpg);
+/* line 191, styles.scss */
+#pic_10 {
+  background: url(../countries/India.jpg);
 }
 
-#content #pics_area #pic_7 {
-	background: url(../countries/Germany.jpg);
+/* line 195, styles.scss */
+#pic_11 {
+  background: url(../countries/Finland.jpg);
 }
 
-#content #pics_area #pic_8 {
-	background: url(../countries/Japan.jpg);
+/* line 199, styles.scss */
+#pic_12 {
+  background: url(../countries/New_Zealand.jpg);
 }
 
-#content #pics_area #pic_9 {
-	background: url(../countries/Australia.jpg);
+/* line 203, styles.scss */
+#pic_13 {
+  background: url(../countries/England.jpg);
 }
 
-#content #pics_area #pic_10 {
-	background: url(../countries/India.jpg);
-}
-
-#content #pics_area #pic_11 {
-	background: url(../countries/Finland.jpg);
-}
-
-#content #pics_area #pic_12 {
-	background: url(../countries/New_Zealand.jpg);
-
-}
-#content #pics_area #pic_13 {
-	background: url(../countries/England.jpg);
-}
-
-#content #pics_area .country_name {
-	/*margin: auto;*/
-	/*padding: 0 auto;*/
-	/*height: 200px;*//*height: 36px;*/
-	/*width: 300px;*/
-	/*top: 82px;*/
-	/*position: relative;*/
-
-	/*200/2-36/2*/
-	/*margin-top: 82px;*/
-	padding-top: 82px;
-	/*margin-bottom: -82px;*/
-	/*padding-bottom: -82px;*/
-
-	text-align: center;
-	/*vertical-align: middle;*/
-
-	font: normal 36px NewBaskervilleC;
-	color: white;
-}
-
-#content #pics_area .block:hover {
-	cursor: pointer;
-	/*padding: 157px 20px;*/
-}
-
-#content #pics_area .block:hover .country_name{
-	/*cursor: pointer;*/
-	/*200/2-36/2*/
-	/*margin-top: 82px;*/
-	padding: 157px 0 0 20px;
-
-	text-align: left;
-	font: normal 24px NewBaskervilleC;
-}
-
-#content #pics_area .country_name_special {
-	height: 40px;
-	top: 81px;
-	left: 29px;
-	position: relative;
-
-	font: normal 40px NewBaskervilleC;
-	color: white;
-}
 /*---------- FOOTER ----------*/
-
+/* line 210, styles.scss */
 #footer {
-	height: 60px;
-	background: #282a2d;
+  height: 60px;
+  background: #282a2d;
 }
-
+/* line 214, styles.scss */
 #footer #years {
-	float: left;
-	margin: 22px 10px; 
-	
-	font: normal 16px NewBaskervilleC;
-	color: #5e6267;
+  float: left;
+  margin: 22px 10px;
+  font: normal 16px NewBaskervilleC;
+  color: #5e6267;
 }
-
+/* line 220, styles.scss */
 #footer #logo {
-	width: 28px;
-	height: 33px;
-	float: right;
-	margin: 13px 10px;
-	
-	background: url(../images/running_man.png);
+  width: 28px;
+  height: 33px;
+  float: right;
+  margin: 13px 10px;
+  background: url(../images/running_man.png);
 }
-
+/* line 228, styles.scss */
 #footer #author {
-	float: right;
-	padding: 22px 5px;
-	
-	font: normal 14px PT Sans;
-	color: #8f9397;
-	/*outline: 1px solid red;*/
+  float: right;
+  padding: 22px 5px;
+  font: normal 14px PT Sans;
+  color: #8f9397;
 }
-
+/* line 235, styles.scss */
 #footer #slogan {
-	float: right;
-	right: 0;
-	margin: 0;
-	padding: 22px 0	;
-	
-	font: normal 14px PT Sans;
-	color: #5e6267;
-	/*outline: 1px solid red;*/
+  float: right;
+  right: 0;
+  margin: 0;
+  padding: 22px 0;
+  font: normal 14px PT Sans;
+  color: #5e6267;
 }

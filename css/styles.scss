@@ -1,0 +1,243 @@
+@import "_lib";
+@import "_bxslider";
+@import "_jquery.lightbox";
+
+$w: 20px;
+$h: 20px;
+
+html{
+  height: 100%;
+  font: normal 16px NewBaskervilleC;
+  outline: none;
+
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #eff2f7;
+    outline: none;
+  }
+}
+
+.page {
+  margin: auto 90px;
+}
+
+/*---------- HEADER ----------*/
+
+#header {
+  width: 100%;
+  height: 80px;
+  background: #282a2d;
+
+  #logo {
+    width: 41px;
+    height: 56px;
+    margin: 12px 15px;
+    float: left;
+    background: url(../images/feet.png);
+  }
+  #title {
+    position: relative;
+    top: 15px;
+    font: normal 32px NewBaskervilleC;
+    color: white;
+  }
+  #slogan {
+    top: 10px;
+    position: relative;
+    font: normal 11px PT Sans;
+    color: #4c4f54;
+  }
+}
+
+
+/*---------- CONTENT ----------*/
+
+#content {
+  padding: 60px 0;
+}
+
+#menu ul{
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: 27px;
+    display: inline;
+
+    a{
+      outline: none;
+      text-decoration: none;
+      font: normal 12px PT Sans;
+      color: #9fa2a8; /*#bfc2c8;*/
+
+      &:hover {
+        color: #242526;
+      }
+
+      #nowopen {
+        font-weight: bold;
+        color: #242526;
+        border-bottom: 2px solid #242526;
+      }
+    }
+  }
+}
+
+
+#pics_area {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.block {
+  width: 300px;
+  height: 200px;
+  margin: 20px 20px 0 0;
+  position: relative;
+  display: inline-block;
+  font: normal 36px NewBaskervilleC;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .country_name {
+    position: absolute;
+    top: 75px;
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &:hover .country_name{
+    top: initial;
+    bottom: 20px;
+    left: 10px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .country_name_special {
+    height: 40px;
+    top: 81px;
+    left: 29px;
+    position: relative;
+
+    font: normal 40px NewBaskervilleC;
+    color: white;
+  }
+
+  .previous_bttn, .next_bttn {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    bottom: $w;
+    right: $h;
+    background: url("../svg/previous_slide.svg");
+  }
+}
+
+
+
+.bxslider{
+  color: red;
+  font-weight: bold;
+}
+
+
+#pic_1 {
+//  width: 620px;
+//  height: 420px;
+  background: url(../countries/Latin_America.jpg);
+}
+
+#pic_2 {
+  background: url(../countries/Russia.jpg);
+}
+
+#pic_3 {
+  background: url(../countries/Cuba.jpg);
+}
+
+#pic_4 {
+  background: url(../countries/Norway.jpg);
+}
+
+#pic_5 {
+  background: url(../countries/Switzerland.jpg);
+}
+
+#pic_6 {
+  background: url(../countries/China.jpg);
+}
+
+#pic_7 {
+  background: url(../countries/Germany.jpg);
+}
+
+#pic_8 {
+  background: url(../countries/Japan.jpg);
+}
+
+#pic_9 {
+  background: url(../countries/Australia.jpg);
+}
+
+#pic_10 {
+  background: url(../countries/India.jpg);
+}
+
+#pic_11 {
+  background: url(../countries/Finland.jpg);
+}
+
+#pic_12 {
+  background: url(../countries/New_Zealand.jpg);
+
+}
+#pic_13 {
+  background: url(../countries/England.jpg);
+}
+
+
+/*---------- FOOTER ----------*/
+
+#footer {
+  height: 60px;
+  background: #282a2d;
+
+  #years {
+    float: left;
+    margin: 22px 10px;
+    font: normal 16px NewBaskervilleC;
+    color: #5e6267;
+  }
+  #logo {
+    width: 28px;
+    height: 33px;
+    float: right;
+    margin: 13px 10px;
+    background: url(../images/running_man.png);
+  }
+
+  #author {
+    float: right;
+    padding: 22px 5px;
+    font: normal 14px PT Sans;
+    color: #8f9397;
+  }
+
+  #slogan {
+    float: right;
+    right: 0;
+    margin: 0;
+    padding: 22px 0	;
+    font: normal 14px PT Sans;
+    color: #5e6267;
+  }
+}
