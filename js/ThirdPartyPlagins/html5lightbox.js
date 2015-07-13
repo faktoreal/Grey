@@ -65,7 +65,7 @@ function loadHtml5LightBox(jsFolder) {
                 resizespeed: 400,
                 fadespeed: 400,
                 jsfolder: jsFolder,
-                skinsfoldername: "../../img/lightbox/",
+                skinsfoldername: "../../images/lightbox/",
                 loadingimage: "lightbox-loading.gif",
                 nextimage: "lightbox-next.png",
                 previmage: "lightbox-prev.png",

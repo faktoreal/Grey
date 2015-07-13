@@ -56,7 +56,7 @@
   transform: translatez(0);
 }
 
-/* line 57, _bxslider.scss */
+/* line 58, _bxslider.scss */
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
   position: absolute;
@@ -68,7 +68,7 @@
 /* line 66, _bxslider.scss */
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url(../images/loader.gif) center center no-repeat #fff;
+  background: url(../images/loader.gif) center center no-repeat white;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -88,7 +88,7 @@
   padding-top: 20px;
 }
 
-/* line 88, _bxslider.scss */
+/* line 89, _bxslider.scss */
 .bx-wrapper .bx-pager .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
@@ -110,7 +110,7 @@
   border-radius: 5px;
 }
 
-/* line 108, _bxslider.scss */
+/* line 109, _bxslider.scss */
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #000;
@@ -174,7 +174,7 @@
   margin: 0 3px;
 }
 
-/* line 165, _bxslider.scss */
+/* line 166, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start:hover,
 .bx-wrapper .bx-controls-auto .bx-start.active {
   background-position: -86px 0;
@@ -191,7 +191,7 @@
   margin: 0 3px;
 }
 
-/* line 180, _bxslider.scss */
+/* line 181, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop:hover,
 .bx-wrapper .bx-controls-auto .bx-stop.active {
   background-position: -86px -33px;
@@ -513,16 +513,18 @@ html body {
   width: 300px;
   text-align: center;
   font: normal 36px NewBaskervilleC;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
-/* line 119, styles.scss */
+/* line 125, styles.scss */
 .block:hover .country_name {
-  top: initial;
-  bottom: 20px;
+  top: 150px;
   left: 10px;
   text-align: left;
   font: normal 24px NewBaskervilleC;
 }
-/* line 129, styles.scss */
+/* line 135, styles.scss */
 .block .country_name_special {
   height: 40px;
   top: 81px;
@@ -531,7 +533,7 @@ html body {
   font: normal 40px NewBaskervilleC;
   color: white;
 }
-/* line 139, styles.scss */
+/* line 145, styles.scss */
 .block .previous_bttn, .block .next_bttn {
   width: 21px;
   height: 21px;
@@ -541,78 +543,78 @@ html body {
   background: url("../images/svg/previous_slide.svg");
 }
 
-/* line 151, styles.scss */
+/* line 157, styles.scss */
 .bxslider {
   color: red;
   font-weight: bold;
 }
 
-/* line 157, styles.scss */
+/* line 163, styles.scss */
 #pic_1 {
   background: url("../images/countries/Latin_America.jpg");
 }
 
-/* line 163, styles.scss */
+/* line 169, styles.scss */
 #pic_2 {
   background: url("../images/countries/Russia.jpg");
 }
 
-/* line 167, styles.scss */
+/* line 173, styles.scss */
 #pic_3 {
   background: url(../images/countries/Cuba.jpg);
 }
 
-/* line 171, styles.scss */
+/* line 177, styles.scss */
 #pic_4 {
   background: url(../images/countries/Norway.jpg);
 }
 
-/* line 175, styles.scss */
+/* line 181, styles.scss */
 #pic_5 {
   background: url(../images/countries/Switzerland.jpg);
 }
 
-/* line 179, styles.scss */
+/* line 185, styles.scss */
 #pic_6 {
   background: url(../images/countries/China.jpg);
 }
 
-/* line 183, styles.scss */
+/* line 189, styles.scss */
 #pic_7 {
   background: url(../images/countries/Germany.jpg);
 }
 
-/* line 187, styles.scss */
+/* line 193, styles.scss */
 #pic_8 {
   background: url(../images/countries/Japan.jpg);
 }
 
-/* line 191, styles.scss */
+/* line 197, styles.scss */
 #pic_9 {
   background: url(../images/countries/Australia.jpg);
 }
 
-/* line 195, styles.scss */
+/* line 201, styles.scss */
 #pic_10 {
   background: url(../images/countries/India.jpg);
 }
 
-/* line 199, styles.scss */
+/* line 205, styles.scss */
 #pic_11 {
   background: url(../images/countries/Finland.jpg);
 }
 
-/* line 203, styles.scss */
+/* line 209, styles.scss */
 #pic_12 {
   background: url(../images/countries/New_Zealand.jpg);
 }
 
-/* line 207, styles.scss */
+/* line 213, styles.scss */
 #pic_13 {
   background: url(../images/countries/England.jpg);
 }
 
-/* line 213, styles.scss */
+/* line 219, styles.scss */
 #test {
   height: 200px;
   width: 300px;
@@ -620,19 +622,19 @@ html body {
 }
 
 /*---------- FOOTER ----------*/
-/* line 221, styles.scss */
+/* line 227, styles.scss */
 #footer {
   height: 60px;
   background: #282a2d;
 }
-/* line 225, styles.scss */
+/* line 231, styles.scss */
 #footer #years {
   float: left;
   margin: 22px 10px;
   font: normal 16px NewBaskervilleC;
   color: #5e6267;
 }
-/* line 231, styles.scss */
+/* line 237, styles.scss */
 #footer #logo {
   width: 28px;
   height: 33px;
@@ -640,14 +642,14 @@ html body {
   margin: 13px 10px;
   background: url(../images/running_man.png);
 }
-/* line 239, styles.scss */
+/* line 245, styles.scss */
 #footer #author {
   float: right;
   padding: 22px 5px;
   font: normal 14px PT Sans;
   color: #8f9397;
 }
-/* line 246, styles.scss */
+/* line 252, styles.scss */
 #footer #slogan {
   float: right;
   right: 0;
