@@ -8,7 +8,7 @@ $(document).ready(function(){
         useCSS: false,
 
         mode: 'fade',
-        speed: 2000
+        speed: 500
     });
 
     /* -------------  Slider For Programs END -------------- */
