@@ -489,28 +489,37 @@ html body {
   border-bottom: 2px solid #242526;
 }
 
-/* line 94, styles.scss */
-#pics_area {
-  display: flex;
-  flex-flow: row-reverse wrap;
-  justify-content: space-between;
+/* line 93, styles.scss */
+#blocks_wrapper {
+  margin: auto -20px;
 }
 
-/* line 101, styles.scss */
+/* line 96, styles.scss */
+#blocks_area_wrapper {
+  margin: auto 20px;
+}
+
+/* line 102, styles.scss */
+#blocks_area {
+  display: inline-table;
+  margin-left: 20px;
+}
+
+/* line 113, styles.scss */
 .block {
   width: 300px;
   height: 200px;
-  margin-top: 20px;
+  margin: 20px 20px 0 0;
   position: relative;
   display: inline-block;
   color: white;
   background: green;
 }
-/* line 111, styles.scss */
+/* line 123, styles.scss */
 .block:hover {
   cursor: pointer;
 }
-/* line 115, styles.scss */
+/* line 127, styles.scss */
 .block .country_name {
   position: absolute;
   top: 75px;
@@ -521,14 +530,14 @@ html body {
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
-/* line 129, styles.scss */
+/* line 141, styles.scss */
 .block:hover .country_name {
   top: 150px;
   left: 10px;
   text-align: left;
   font: normal 24px NewBaskervilleC;
 }
-/* line 139, styles.scss */
+/* line 151, styles.scss */
 .block .country_name_special {
   height: 40px;
   top: 81px;
@@ -537,7 +546,7 @@ html body {
   font: normal 40px NewBaskervilleC;
   color: white;
 }
-/* line 149, styles.scss */
+/* line 161, styles.scss */
 .block .previous_bttn, .block .next_bttn {
   width: 21px;
   height: 21px;
@@ -547,78 +556,85 @@ html body {
   background: url("../images/svg/previous_slide.svg");
 }
 
-/* line 161, styles.scss */
+/* line 171, styles.scss */
+.special_block {
+  width: 620px;
+  height: 420px;
+  float: right;
+}
+
+/* line 177, styles.scss */
 .bxslider {
   color: red;
   font-weight: bold;
 }
 
-/* line 167, styles.scss */
+/* line 183, styles.scss */
 #pic_1 {
   background: url("../images/countries/Latin_America.jpg");
 }
 
-/* line 173, styles.scss */
+/* line 188, styles.scss */
 #pic_2 {
   background: url("../images/countries/Russia.jpg");
 }
 
-/* line 177, styles.scss */
+/* line 192, styles.scss */
 #pic_3 {
   background: url(../images/countries/Cuba.jpg);
 }
 
-/* line 181, styles.scss */
+/* line 196, styles.scss */
 #pic_4 {
   background: url(../images/countries/Norway.jpg);
 }
 
-/* line 185, styles.scss */
+/* line 200, styles.scss */
 #pic_5 {
   background: url(../images/countries/Switzerland.jpg);
 }
 
-/* line 189, styles.scss */
+/* line 204, styles.scss */
 #pic_6 {
   background: url(../images/countries/China.jpg);
 }
 
-/* line 193, styles.scss */
+/* line 208, styles.scss */
 #pic_7 {
   background: url(../images/countries/Germany.jpg);
 }
 
-/* line 197, styles.scss */
+/* line 212, styles.scss */
 #pic_8 {
   background: url(../images/countries/Japan.jpg);
 }
 
-/* line 201, styles.scss */
+/* line 216, styles.scss */
 #pic_9 {
   background: url(../images/countries/Australia.jpg);
 }
 
-/* line 205, styles.scss */
+/* line 220, styles.scss */
 #pic_10 {
   background: url(../images/countries/India.jpg);
 }
 
-/* line 209, styles.scss */
+/* line 224, styles.scss */
 #pic_11 {
   background: url(../images/countries/Finland.jpg);
 }
 
-/* line 213, styles.scss */
+/* line 228, styles.scss */
 #pic_12 {
   background: url(../images/countries/New_Zealand.jpg);
 }
 
-/* line 217, styles.scss */
+/* line 232, styles.scss */
 #pic_13 {
   background: url(../images/countries/England.jpg);
 }
 
-/* line 223, styles.scss */
+/* line 238, styles.scss */
 #test {
   height: 200px;
   width: 300px;
@@ -626,19 +642,19 @@ html body {
 }
 
 /*---------- FOOTER ----------*/
-/* line 231, styles.scss */
+/* line 246, styles.scss */
 #footer {
   height: 60px;
   background: #282a2d;
 }
-/* line 235, styles.scss */
+/* line 250, styles.scss */
 #footer #years {
   float: left;
   margin: 22px 10px;
   font: normal 16px NewBaskervilleC;
   color: #5e6267;
 }
-/* line 241, styles.scss */
+/* line 256, styles.scss */
 #footer #logo {
   width: 28px;
   height: 33px;
@@ -646,14 +662,14 @@ html body {
   margin: 13px 10px;
   background: url(../images/running_man.png);
 }
-/* line 249, styles.scss */
+/* line 264, styles.scss */
 #footer #author {
   float: right;
   padding: 22px 5px;
   font: normal 14px PT Sans;
   color: #8f9397;
 }
-/* line 256, styles.scss */
+/* line 271, styles.scss */
 #footer #slogan {
   float: right;
   right: 0;

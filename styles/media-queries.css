@@ -1,35 +1,41 @@
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 680px) {
     .page {
+        width: 340px;
+    }
+    .special_block{
         width: 300px;
     }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 680px) {
     .page {
+        width: 660px;
+    }
+    .special_block{
         width: 620px;
     }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
     .page {
-    width: 940px;
+    width: 980px;
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1320px) {
     .page {
-    width: 1260px;
+    width: 1300px;
     }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1640px) {
     .page {
-    width: 1580px;
+    width: 1620px;
     }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1960px) {
     .page {
-    width: 1900px;
+    width: 1920px;
     }
 }

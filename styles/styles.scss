@@ -90,18 +90,30 @@ html{
   }
 }
 
+#blocks_wrapper{
+  margin: auto -20px;
+}
+#blocks_area_wrapper {
+  margin: auto 20px;
+//  margin: auto;
+//  outline: 1px  dashed green;
+}
 
-#pics_area {
-  display: flex;
-  flex-flow: row-reverse wrap;
-  justify-content: space-between;
+#blocks_area {
+//  margin-left: 20px;
+//  margin: auto;
+  display: inline-table; //display: flex;
+  margin-left: 20px;
+//  margin: auto;
+//  flex-flow: row-reverse wrap;
+//  justify-content: space-between;
 }
 
 
 .block {
   width: 300px;
   height: 200px;
-  margin-top: 20px;//  margin: 20px 20px 0 0;
+  margin: 20px 20px 0 0;//margin-top: 20px;//  margin: 20px 20px 0 0;
   position: relative;
   display: inline-block;
 //  font: normal 36px NewBaskervilleC;
@@ -156,7 +168,11 @@ html{
   }
 }
 
-
+.special_block{
+  width: 620px;
+  height: 420px;
+  float: right;
+}
 
 .bxslider{
   color: red;
@@ -165,8 +181,7 @@ html{
 
 
 #pic_1 {
-//  width: 620px;
-//  height: 420px;
+
   background: url("../images/countries/Latin_America.jpg");
 }
 
