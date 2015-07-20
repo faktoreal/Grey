@@ -119,51 +119,53 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 /* line 115, _bxslider.scss */
 .bx-wrapper .bx-prev {
-  left: 250px;
+  left: 330px;
   top: 50px;
-  background: url(../images/controls.png) no-repeat 0 -32px;
+  background: url(../images/svg/next_bttn.svg) no-repeat;
+  opacity: 0.3;
 }
 
 /* line 121, _bxslider.scss */
 .bx-wrapper .bx-next {
-  right: -50px;
-  background: url(../images/controls.png) no-repeat -43px -32px;
+  right: -30px;
+  background: url(../images/svg/previous_bttn.svg) no-repeat;
+  opacity: 0.3;
 }
 
 /* line 126, _bxslider.scss */
 .bx-wrapper .bx-prev:hover {
-  background-position: 0 0;
+  opacity: 0.15;
 }
 
 /* line 130, _bxslider.scss */
 .bx-wrapper .bx-next:hover {
-  background-position: -43px 0;
+  opacity: 0.15;
 }
 
 /* line 134, _bxslider.scss */
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 160px;
-  margin-top: -16px;
   outline: 0;
-  width: 32px;
-  height: 32px;
+  width: 21px;
+  height: 21px;
   text-indent: -9999px;
   z-index: 9999;
+  margin-left: -30px;
 }
 
-/* line 145, _bxslider.scss */
+/* line 146, _bxslider.scss */
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
 
 /* AUTO CONTROLS (START / STOP) */
-/* line 151, _bxslider.scss */
+/* line 152, _bxslider.scss */
 .bx-wrapper .bx-controls-auto {
   text-align: center;
 }
 
-/* line 155, _bxslider.scss */
+/* line 156, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start {
   display: block;
   text-indent: -9999px;
@@ -174,13 +176,13 @@
   margin: 0 3px;
 }
 
-/* line 165, _bxslider.scss */
+/* line 166, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-start:hover,
 .bx-wrapper .bx-controls-auto .bx-start.active {
   background-position: -86px 0;
 }
 
-/* line 170, _bxslider.scss */
+/* line 171, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop {
   display: block;
   text-indent: -9999px;
@@ -191,27 +193,27 @@
   margin: 0 3px;
 }
 
-/* line 180, _bxslider.scss */
+/* line 181, _bxslider.scss */
 .bx-wrapper .bx-controls-auto .bx-stop:hover,
 .bx-wrapper .bx-controls-auto .bx-stop.active {
   background-position: -86px -33px;
 }
 
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-/* line 188, _bxslider.scss */
+/* line 189, _bxslider.scss */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
   text-align: left;
   width: 80%;
 }
 
-/* line 193, _bxslider.scss */
+/* line 194, _bxslider.scss */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
   width: 35px;
 }
 
 /* IMAGE CAPTIONS */
-/* line 200, _bxslider.scss */
+/* line 201, _bxslider.scss */
 .bx-wrapper .bx-caption {
   position: absolute;
   bottom: 0;
@@ -221,7 +223,7 @@
   width: 100%;
 }
 
-/* line 209, _bxslider.scss */
+/* line 210, _bxslider.scss */
 .bx-wrapper .bx-caption span {
   color: #fff;
   font-family: Arial, sans-serif;
@@ -230,24 +232,24 @@
   padding: 10px;
 }
 
-/* line 217, _bxslider.scss */
+/* line 218, _bxslider.scss */
 .bx-clone {
   display: none;
 }
 
-/* line 222, _bxslider.scss */
+/* line 223, _bxslider.scss */
 .bx-wrapper {
   top: -16px;
   left: -40px;
   width: 300px !important;
 }
 
-/* line 228, _bxslider.scss */
+/* line 229, _bxslider.scss */
 .bx-pager {
   display: none;
 }
 
-/* line 231, _bxslider.scss */
+/* line 232, _bxslider.scss */
 .bx-next {
   left: 295px !important;
 }
@@ -417,17 +419,18 @@ html body {
 
 /* line 23, styles.scss */
 .page {
+  position: relative;
   margin: auto;
 }
 
 /*---------- HEADER ----------*/
-/* line 29, styles.scss */
+/* line 30, styles.scss */
 #header {
   width: 100%;
   height: 80px;
   background: #282a2d;
 }
-/* line 34, styles.scss */
+/* line 35, styles.scss */
 #header #logo {
   width: 41px;
   height: 56px;
@@ -435,14 +438,14 @@ html body {
   float: left;
   background: url(../images/feet.png);
 }
-/* line 41, styles.scss */
+/* line 42, styles.scss */
 #header #title {
   position: relative;
   top: 15px;
   font: normal 32px NewBaskervilleC;
   color: white;
 }
-/* line 47, styles.scss */
+/* line 48, styles.scss */
 #header #slogan {
   top: 10px;
   position: relative;
@@ -451,26 +454,27 @@ html body {
 }
 
 /*---------- CONTENT ----------*/
-/* line 58, styles.scss */
+/* line 59, styles.scss */
 #content {
   padding: 60px 0;
 }
 
-/* line 62, styles.scss */
+/* line 63, styles.scss */
 #menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 66, styles.scss */
+/* line 67, styles.scss */
 #menu ul #nowopen {
   border-bottom: 2px solid black;
 }
-/* line 70, styles.scss */
+/* line 71, styles.scss */
 #menu ul li {
+  margin: 5px;
   margin-right: 27px;
-  display: inline;
+  display: inline-block;
 }
-/* line 74, styles.scss */
+/* line 76, styles.scss */
 #menu ul li a {
   outline: none;
   text-decoration: none;
@@ -478,34 +482,47 @@ html body {
   color: #9fa2a8;
   /*#bfc2c8;*/
 }
-/* line 80, styles.scss */
+/* line 82, styles.scss */
 #menu ul li a:hover {
   color: #242526;
 }
-/* line 84, styles.scss */
+/* line 86, styles.scss */
 #menu ul li a #nowopen {
   font-weight: bold;
   color: #242526;
   border-bottom: 2px solid #242526;
 }
 
-/* line 93, styles.scss */
+/* line 95, styles.scss */
 #blocks_wrapper {
-  margin: auto -20px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
-/* line 96, styles.scss */
-#blocks_area_wrapper {
-  margin: auto 20px;
-}
-
-/* line 102, styles.scss */
+/* line 100, styles.scss */
 #blocks_area {
-  display: inline-table;
   margin-left: 20px;
+  display: inline-table;
 }
 
+/* line 105, styles.scss */
+#special_menu {
+  position: relative;
+  margin: 150px 0 0 20px;
+  color: white;
+}
+/* line 110, styles.scss */
+#special_menu li {
+  height: 45px;
+}
 /* line 113, styles.scss */
+#special_menu li a {
+  color: white;
+  font: normal 20px NewBaskervilleC;
+  text-decoration: none;
+}
+
+/* line 123, styles.scss */
 .block {
   width: 300px;
   height: 200px;
@@ -513,168 +530,91 @@ html body {
   position: relative;
   display: inline-block;
   color: white;
-  background: green;
 }
-/* line 123, styles.scss */
+/* line 131, styles.scss */
 .block:hover {
   cursor: pointer;
 }
-/* line 127, styles.scss */
+/* line 135, styles.scss */
 .block .country_name {
   position: absolute;
   top: 75px;
   width: 300px;
   text-align: center;
   font: normal 36px NewBaskervilleC;
-  -webkit-transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
 }
-/* line 141, styles.scss */
+/* line 147, styles.scss */
 .block:hover .country_name {
   top: 150px;
   left: 10px;
   text-align: left;
   font: normal 24px NewBaskervilleC;
 }
-/* line 151, styles.scss */
+/* line 154, styles.scss */
 .block .country_name_special {
+  top: 75px;
+  left: 30px;
   height: 40px;
-  top: 81px;
-  left: 29px;
-  position: relative;
+  position: absolute;
   font: normal 40px NewBaskervilleC;
   color: white;
 }
-/* line 161, styles.scss */
-.block .previous_bttn, .block .next_bttn {
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: url("../images/svg/previous_slide.svg");
-}
 
-/* line 171, styles.scss */
+/* line 164, styles.scss */
 .special_block {
+  cursor: default !important;
   width: 620px;
   height: 420px;
   float: right;
 }
 
-/* line 177, styles.scss */
+/* line 171, styles.scss */
 .bxslider {
   color: red;
   font-weight: bold;
 }
 
-/* line 183, styles.scss */
-#pic_1 {
+/* line 176, styles.scss */
+#blocks_area #special {
   background: url("../images/countries/Latin_America.jpg");
 }
 
-/* line 188, styles.scss */
-#pic_2 {
-  background: url("../images/countries/Russia.jpg");
-}
-
-/* line 192, styles.scss */
-#pic_3 {
-  background: url(../images/countries/Cuba.jpg);
-}
-
-/* line 196, styles.scss */
-#pic_4 {
-  background: url(../images/countries/Norway.jpg);
-}
-
-/* line 200, styles.scss */
-#pic_5 {
-  background: url(../images/countries/Switzerland.jpg);
-}
-
-/* line 204, styles.scss */
-#pic_6 {
-  background: url(../images/countries/China.jpg);
-}
-
-/* line 208, styles.scss */
-#pic_7 {
-  background: url(../images/countries/Germany.jpg);
-}
-
-/* line 212, styles.scss */
-#pic_8 {
-  background: url(../images/countries/Japan.jpg);
-}
-
-/* line 216, styles.scss */
-#pic_9 {
-  background: url(../images/countries/Australia.jpg);
-}
-
-/* line 220, styles.scss */
-#pic_10 {
-  background: url(../images/countries/India.jpg);
-}
-
-/* line 224, styles.scss */
-#pic_11 {
-  background: url(../images/countries/Finland.jpg);
-}
-
-/* line 228, styles.scss */
-#pic_12 {
-  background: url(../images/countries/New_Zealand.jpg);
-}
-
-/* line 232, styles.scss */
-#pic_13 {
-  background: url(../images/countries/England.jpg);
-}
-
-/* line 238, styles.scss */
-#test {
-  height: 200px;
-  width: 300px;
-  outline: 1px solid red;
-}
-
 /*---------- FOOTER ----------*/
-/* line 246, styles.scss */
+/* line 182, styles.scss */
 #footer {
-  height: 60px;
+  position: relative;
   background: #282a2d;
 }
-/* line 250, styles.scss */
+/* line 186, styles.scss */
 #footer #years {
-  float: left;
-  margin: 22px 10px;
+  position: relative;
+  padding: 22px 10px;
   font: normal 16px NewBaskervilleC;
   color: #5e6267;
 }
-/* line 256, styles.scss */
-#footer #logo {
-  width: 28px;
-  height: 33px;
-  float: right;
-  margin: 13px 10px;
-  background: url(../images/running_man.png);
-}
-/* line 264, styles.scss */
-#footer #author {
-  float: right;
-  padding: 22px 5px;
-  font: normal 14px PT Sans;
-  color: #8f9397;
-}
-/* line 271, styles.scss */
+/* line 193, styles.scss */
 #footer #slogan {
-  float: right;
+  display: inline-block;
+  position: relative;
   right: 0;
   margin: 0;
   padding: 22px 0;
   font: normal 14px PT Sans;
   color: #5e6267;
+}
+/* line 202, styles.scss */
+#footer #author {
+  display: inline-block;
+  padding: 22px 5px;
+  font: normal 14px PT Sans;
+  color: #8f9397;
+}
+/* line 208, styles.scss */
+#footer #logo {
+  display: inline-block;
+  width: 28px;
+  height: 33px;
+  float: right;
+  margin: 13px 10px;
+  background: url(../images/running_man.png);
 }

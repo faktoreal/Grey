@@ -55,7 +55,7 @@ function loadHtml5LightBox(jsFolder) {
                 overlaybgcolor: "#000",
                 overlayopacity: 0.8,
                 bgcolor: "#fff",
-                bordersize: 8,
+                bordersize: 0,
                 borderradius: 0,
                 bordermargin: 16,
                 barautoheight: true,
@@ -65,11 +65,11 @@ function loadHtml5LightBox(jsFolder) {
                 resizespeed: 400,
                 fadespeed: 400,
                 jsfolder: jsFolder,
-                skinsfoldername: "../../images/lightbox/",
+                skinsfoldername: "../../images/svg/",
                 loadingimage: "lightbox-loading.gif",
                 nextimage: "lightbox-next.png",
-                previmage: "lightbox-prev.png",
-                closeimage: "lightbox-close.png",
+                previmage: "previous_bttn.svg",
+                closeimage: "close_bttn.svg",
                 playvideoimage: "lightbox-playvideo.png",
                 titlebgimage: "lightbox-titlebg.png",
                 navarrowsprevimage: "nav-arrows-prev.png",
@@ -189,12 +189,14 @@ function loadHtml5LightBox(jsFolder) {
                 inst.options.descriptioncss;
                 styleCss += ".html5-error " + inst.options.errorcss;
                 $("head").append("<style type='text/css'>" + styleCss + "</style>");
+
                 inst.$lightbox = jQuery("<div id='html5-lightbox' style='display:none;top:0px;left:0px;width:100%;height:100%;z-index:9999998;text-align:center;'>" + "<div id='html5-lightbox-overlay' style='display:block;position:absolute;top:0px;left:0px;width:100%;min-height:100%;background-color:" + inst.options.overlaybgcolor + ";opacity:" + inst.options.overlayopacity + ";filter:alpha(opacity=" +
                 Math.round(inst.options.overlayopacity * 100) + ");'></div>" + "<div id='html5-lightbox-box' style='display:block;position:relative;margin:0px auto;'>" + "<div id='html5-elem-box' style='display:block;position:relative;margin:0px auto;text-align:center;overflow:hidden;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;'>" + "<div id='html5-elem-wrap' style='display:block;position:relative;margin:0px auto;text-align:center;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;background-color:" +
                 inst.options.bgcolor + ";'>" + "<div id='html5-loading' style='display:none;position:absolute;top:0px;left:0px;text-align:center;width:100%;height:100%;background:url(\"" + inst.options.skinsfolder + inst.options.loadingimage + "\") no-repeat center center;'></div>" + "<div id='html5-error' class='html5-error' style='display:none;position:absolute;padding:" + inst.options.bordersize + "px;text-align:center;width:" + inst.options.errorwidth + "px;height:" + inst.options.errorheight + "px;'>" + "The requested content cannot be loaded.<br />Please try again later." +
-                "</div>" + "<div id='html5-image' style='display:none;position:absolute;top:0px;left:0px;" + (inst.options.iequirksmode ? "margin" : "padding") + ":" + inst.options.bordersize + "px;text-align:center;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;'></div>" + "<div id='html5-next' style='display:none;cursor:pointer;position:absolute;right:" + inst.options.bordersize + "px;top:50%;margin-top:-16px;'><img src='" + inst.options.skinsfolder + inst.options.nextimage + "'></div>" + "<div id='html5-prev' style='display:none;cursor:pointer;position:absolute;left:" +
-                inst.options.bordersize + "px;top:50%;margin-top:-16px;'><img src='" + inst.options.skinsfolder + inst.options.previmage + "'></div>" + "</div>" + "</div>" + "<div id='html5-watermark' style='display:none;position:absolute;left:" + String(inst.options.bordersize + 2) + "px;top:" + String(inst.options.bordersize + 2) + "px;'></div>" + "</div>" + "</div>");
+                "</div>" + "<div id='html5-image' style='display:none;position:absolute;top:0px;left:0px;" + (inst.options.iequirksmode ? "margin" : "padding") + ":" + inst.options.bordersize + "px;text-align:center;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;'></div>" + "<div id='html5-next' style='display:none;cursor:pointer;position:absolute;right:" + inst.options.bordersize + "px;top:50%;margin-top:-16px;'><div style='width:30px;height:30px;background:url(../../images/svg/next_bttn.svg);opacity: 0.7'></div></div>" + "<div id='html5-prev' style='display:none;cursor:pointer;position:absolute;left:" +
+                inst.options.bordersize + "px;top:50%;margin-top:-16px;'><div style='width:30px;height:30px;background:url(../../images/svg/previous_bttn.svg);opacity: 0.7'></div></div>" + "</div>" + "</div>" + "<div id='html5-watermark' style='display:none;position:absolute;left:" + String(inst.options.bordersize + 2) + "px;top:" + String(inst.options.bordersize + 2) + "px;'></div>" + "</div>" + "</div>");
                 inst.$lightbox.css({position: inst.options.supportCSSPositionFixed && inst.options.responsive && !inst.options.iequirksmode ? "fixed" : "absolute"});
+
                 inst.$lightbox.appendTo("body");
                 inst.$lightboxBox =
                     $("#html5-lightbox-box", inst.$lightbox);
@@ -264,8 +266,7 @@ function loadHtml5LightBox(jsFolder) {
                     });
                     inst.$text.css({"margin": "0 " + inst.options.bordersize + "px"})
                 }
-                inst.$lightboxBox.append("<div id='html5-close' style='display:none;cursor:pointer;position:absolute;top:0;right:0;margin-top:-16px;margin-right:-16px;'><img src='" +
-                inst.options.skinsfolder + inst.options.closeimage + "'></div>");
+                inst.$lightboxBox.append("<div id='html5-close' style='display:none;cursor:pointer;position:absolute;top:0;right:0;margin-top:-16px;margin-right:-16px;'><div style='width:30px;height:30px;background:url(../../images/svg/close_bttn.svg);opacity: 0.7;position:absolute;margin:-15px;'></div></div>");
                 inst.$close = $("#html5-close", inst.$lightbox);
                 inst.$watermark = $("#html5-watermark", inst.$lightbox);
                 if (inst.options.stamp)inst.$watermark.html(""); else if (inst.options.watermark) {

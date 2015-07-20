@@ -14,6 +14,10 @@ $(document).ready(function(){
     /* -------------  Slider For Programs END -------------- */
 
 
+    $(function() {
+        $("img.lazy").lazyload();
+    });
+
 
 });
 

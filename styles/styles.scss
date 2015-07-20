@@ -21,7 +21,8 @@ html{
 }
 
 .page {
-  margin: auto;//margin: auto 90px;
+  position: relative;
+  margin: auto;
 }
 
 /*---------- HEADER ----------*/
@@ -68,8 +69,9 @@ html{
   }
 
   li {
+    margin: 5px;
     margin-right: 27px;
-    display: inline;
+    display: inline-block;
 
     a{
       outline: none;
@@ -91,34 +93,40 @@ html{
 }
 
 #blocks_wrapper{
-  margin: auto -20px;
-}
-#blocks_area_wrapper {
-  margin: auto 20px;
-//  margin: auto;
-//  outline: 1px  dashed green;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 #blocks_area {
-//  margin-left: 20px;
-//  margin: auto;
-  display: inline-table; //display: flex;
   margin-left: 20px;
-//  margin: auto;
-//  flex-flow: row-reverse wrap;
-//  justify-content: space-between;
+  display: inline-table;
+}
+
+#special_menu {
+  position: relative;
+  margin: 150px 0 0 20px;
+  color: white;
+
+  li{
+    height: 45px;
+
+    a{
+      color: white;
+      font: normal 20px NewBaskervilleC;
+      text-decoration: none;
+    }
+  }
+
 }
 
 
 .block {
   width: 300px;
   height: 200px;
-  margin: 20px 20px 0 0;//margin-top: 20px;//  margin: 20px 20px 0 0;
+  margin: 20px 20px 0 0;
   position: relative;
   display: inline-block;
-//  font: normal 36px NewBaskervilleC;
   color: white;
-  background: green;
 
   &:hover {
     cursor: pointer;
@@ -130,45 +138,31 @@ html{
     width: 300px;
     text-align: center;
     font: normal 36px NewBaskervilleC;
-
     //@include transition(all .15s ease-in-out);
-    -webkit-transition: all 0.15s ease-in-out;
-    -moz-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
-
+//    -webkit-transition: all 0.15s ease-in-out;
+//    -moz-transition: all 0.15s ease-in-out;
+//    transition: all 0.15s ease-in-out;
   }
 
   &:hover .country_name{
     top: 150px;
-    //bottom: 20px;
     left: 10px;
     text-align: left;
     font: normal 24px NewBaskervilleC;
-
-//    outline: 1px solid red;
   }
 
   .country_name_special {
+    top:75px;
+    left: 30px;
     height: 40px;
-    top: 81px;
-    left: 29px;
-    position: relative;
-
+    position: absolute;
     font: normal 40px NewBaskervilleC;
     color: white;
-  }
-
-  .previous_bttn, .next_bttn {
-    width: 21px;
-    height: 21px;
-    position: absolute;
-    bottom: $w;
-    right: $h;
-    background: url("../images/svg/previous_slide.svg");
   }
 }
 
 .special_block{
+  cursor: default !important;
   width: 620px;
   height: 420px;
   float: right;
@@ -179,101 +173,44 @@ html{
   font-weight: bold;
 }
 
-
-#pic_1 {
-
+#blocks_area #special {
   background: url("../images/countries/Latin_America.jpg");
-}
-
-#pic_2 {
-  background: url("../images/countries/Russia.jpg");
-}
-
-#pic_3 {
-  background: url(../images/countries/Cuba.jpg);
-}
-
-#pic_4 {
-  background: url(../images/countries/Norway.jpg);
-}
-
-#pic_5 {
-  background: url(../images/countries/Switzerland.jpg);
-}
-
-#pic_6 {
-  background: url(../images/countries/China.jpg);
-}
-
-#pic_7 {
-  background: url(../images/countries/Germany.jpg);
-}
-
-#pic_8 {
-  background: url(../images/countries/Japan.jpg);
-}
-
-#pic_9 {
-  background: url(../images/countries/Australia.jpg);
-}
-
-#pic_10 {
-  background: url(../images/countries/India.jpg);
-}
-
-#pic_11 {
-  background: url(../images/countries/Finland.jpg);
-}
-
-#pic_12 {
-  background: url(../images/countries/New_Zealand.jpg);
-
-}
-#pic_13 {
-  background: url(../images/countries/England.jpg);
-}
-
-
-
-#test {
-  height: 200px;
-  width: 300px;
-  outline: 1px solid red;
 }
 
 /*---------- FOOTER ----------*/
 
 #footer {
-  height: 60px;
+  position: relative;
   background: #282a2d;
 
   #years {
-    float: left;
-    margin: 22px 10px;
+    position: relative;
+    padding: 22px 10px;
     font: normal 16px NewBaskervilleC;
     color: #5e6267;
   }
-  #logo {
-    width: 28px;
-    height: 33px;
-    float: right;
-    margin: 13px 10px;
-    background: url(../images/running_man.png);
-  }
-
-  #author {
-    float: right;
-    padding: 22px 5px;
-    font: normal 14px PT Sans;
-    color: #8f9397;
-  }
 
   #slogan {
-    float: right;
-    right: 0;
-    margin: 0;
-    padding: 22px 0	;
-    font: normal 14px PT Sans;
-    color: #5e6267;
+      display: inline-block;
+      position: relative;
+      right: 0;
+      margin: 0;
+      padding: 22px 0	;
+      font: normal 14px PT Sans;
+      color: #5e6267;
+  }
+  #author {
+      display: inline-block;
+      padding: 22px 5px;
+      font: normal 14px PT Sans;
+      color: #8f9397;
+  }
+  #logo {
+      display: inline-block;
+      width: 28px;
+      height: 33px;
+      float: right;
+      margin: 13px 10px;
+      background: url(../images/running_man.png);
   }
 }
